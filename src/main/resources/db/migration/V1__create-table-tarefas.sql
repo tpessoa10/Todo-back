@@ -1,0 +1,6 @@
+CREATE TABLE tarefas (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  titulo VARCHAR(255),
+  descricao VARCHAR(255),
+  data DATETIME
+);
