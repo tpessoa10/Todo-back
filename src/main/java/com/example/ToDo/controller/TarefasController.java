@@ -33,7 +33,7 @@ public class TarefasController {
 	public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastroTarefa dados, UriComponentsBuilder uriBuilder) {
 		var tarefa = new Tarefa(dados);
 		repository.save(tarefa);
-		var uri = uriBuilder.path("/bancos/{id}").buildAndExpand(tarefa.getId()).toUri();
+		var uri = uriBuilder.path("/tarefas/{id}").buildAndExpand(tarefa.getId()).toUri();
 		return ResponseEntity.created(uri).body(new DadosDetalhamentoTarefa(tarefa));
 	}
 	
